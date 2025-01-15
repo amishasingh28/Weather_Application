@@ -10,6 +10,7 @@
 - [Lighthouse Report](#Lighthouse-Report)
 - [Project Structure](#project-structure)
 - [API Integration](#api-integration)
+- [Deployment] (#Deployment on AWS Amplify)
 - [Installation](#installation)
 - [License](#license)
 - [Author](#author)
@@ -116,6 +117,16 @@ Replace your-project-directory with the actual name of your project
 directory, and replace your-api-key-here with your OpenWeatherMap API key.
 
 ```
+
+## Deployment on AWS Amplify
+
+1. Log in to the [AWS Management Console](https://aws.amazon.com/console/).
+2. Navigate to **AWS Amplify** and select **Get Started**.
+3. Connect your GitHub repository.
+4. Select the branch to deploy (e.g., `solution/Amisha`).
+5. Configure build settings if required, then click **Save and Deploy**.
+6. After deployment, your application will be accessible at the provided Amplify URL.
+
 
 ## License
 
