@@ -120,8 +120,8 @@ directory, and replace your-api-key-here with your OpenWeatherMap API key.
 ## License
 
 This project is open-source and free for non-commercial use. You are allowed to view, modify, and distribute the code for non-commercial purposes. For commercial use or any other inquiries, please contact me.
-No specific license file is provided. If you have questions about using this project, feel free to reach out to me at dev.abdelrahman7@gmail.com
+No specific license file is provided. If you have questions about using this project, feel free to reach out to me at amisha.singh2812@gmail.com
 
 ## Author
 
-- <a href="https://www.linkedin.com/in/abdelrahmmaan/" target="_blank">LinkedIn</a>
+- <a href="https://www.linkedin.com/in/amisha-singh-6415702a7/" target="_blank">LinkedIn</a>
