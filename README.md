@@ -10,7 +10,7 @@
 - [Lighthouse Report](#Lighthouse-Report)
 - [Project Structure](#project-structure)
 - [API Integration](#api-integration)
-- [Deployment] (#Deployment on AWS Amplify)
+- [Deployment on AWS Amplify](#Deployment on AWS Amplify)
 - [Installation](#installation)
 - [License](#license)
 - [Author](#author)
