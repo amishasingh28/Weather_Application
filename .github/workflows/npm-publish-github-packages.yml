@@ -1,8 +1,16 @@
 name: Node.js Package
 
 on:
+  # Trigger on release creation
   release:
     types: [created]
+  
+  # Trigger on push to the main branch or solution/Amisha branch
+  push:
+    branches:
+      - solution/Amisha
+      - environmet/dev
+      - main
 
 jobs:
   build:
@@ -46,7 +54,7 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.TOKEN }}
 
-  # # Optional: Deployment Job (e.g., Deploy to AWS, Vercel, Netlify, etc.)
+  # Optional: Deployment Job (e.g., Deploy to AWS, Vercel, Netlify, etc.)
   # deploy:
   #   needs: publish-gpr
   #   runs-on: ubuntu-latest
@@ -63,5 +71,4 @@ jobs:
   #         aws configure set default.region us-east-1
           
   #         # Example AWS CLI command to deploy (customize according to your setup)
-  #         aws amplify start-deployment --app-id <app_id> --branch-name main
-
+  #         aws amplify start-deployment --app-id <app_id> --branch-name solution/Amisha
