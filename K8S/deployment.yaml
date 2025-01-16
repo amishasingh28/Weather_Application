@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: weather-application
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: weather-application
+  template:
+    metadata:
+      labels:
+        app: weather-application
+    spec:
+      containers:
+        - name: weather-application
+          image: nikhil635/weather-node-local:weather-application-v1.0.0  # Replace with your image tag
+          ports:
+            - containerPort: 80
+
