@@ -7,10 +7,10 @@
 - [Screenshot](#screenshot)
 - [Links](#links)
 - [Features](#features)
-- [Lighthouse Report](#Lighthouse-Report)
+- [Lighthouse Report](#lighthouse-report)
 - [Project Structure](#project-structure)
 - [API Integration](#api-integration)
-- [Deployment on AWS Amplify](#Deployment on AWS Amplify)
+- [Deployment on AWS Amplify](#deployment-on-aws-amplify)
 - [Installation](#installation)
 - [License](#license)
 - [Author](#author)
@@ -35,7 +35,7 @@ This is a Weather Dashboard application designed to provide users with up-to-dat
 
 ### Links
 
-- Live Site URL : [Weather Application](https://weatheritoo.vercel.app/)
+- Live Site URL : [Weather Application](https://main.d3p3mj8qy0la6p.amplifyapp.com/)
 
 ### Features
 
