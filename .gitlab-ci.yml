@@ -1,0 +1,40 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  DOCKER_USERNAME: $CI_REGISTRY_USER  
+  DOCKER_PASSWORD: $CI_REGISTRY_PASSWORD  
+  AWS_REGION: 'ap-south-1'  
+  EKS_CLUSTER_NAME: 'your-cluster-name'  
+
+before_script:
+  - echo "Setting up Docker"
+  - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+  - echo "Setting up AWS CLI"
+  - pip install awscli
+  - aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID
+  - aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY
+  - aws configure set region $AWS_REGION
+
+build:
+  stage: build
+  script:
+    - echo "Getting commit hash"
+    - COMMIT_HASH=$(git rev-parse --short HEAD)
+    - VERSION="v1.${CI_PIPELINE_ID}.${COMMIT_HASH}"
+    - TAGNAME="weather-application-${VERSION}"
+    - echo "Building Docker image with tag ${TAGNAME}"
+    - docker build -t $DOCKER_USERNAME/weather-node-local:$TAGNAME .
+    - echo "Pushing Docker image to Docker Hub"
+    - docker push $DOCKER_USERNAME/weather-node-local:$TAGNAME
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Updating kubeconfig for EKS"
+    - aws eks --region $AWS_REGION update-kubeconfig --name $EKS_CLUSTER_NAME
+    - echo "Deploying to Kubernetes"
+    - kubectl apply -f k8s/deployment.yaml
+    - kubectl apply -f k8s/service.yaml
+    - kubectl apply -f k8s/ingress.yaml

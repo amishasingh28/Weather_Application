@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: weather-application-service
+spec:
+  selector:
+    app: weather-application
+  ports:
+    - protocol: TCP
+      port: 80         # Port exposed externally
+      targetPort: 80    # Port on the container
+  type: LoadBalancer   # LoadBalancer to expose the service externally (works with cloud providers)
+
