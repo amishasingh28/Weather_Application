@@ -3,10 +3,10 @@ stages:
   - deploy
 
 variables:
-  DOCKER_USERNAME: $CI_REGISTRY_USER  # GitLab CI Docker credentials
-  DOCKER_PASSWORD: $CI_REGISTRY_PASSWORD  # GitLab CI Docker credentials
-  AWS_REGION: 'ap-south-1'  # Replace with your AWS region
-  EKS_CLUSTER_NAME: 'your-cluster-name'  # Replace with your EKS cluster name
+  DOCKER_USERNAME: $CI_REGISTRY_USER  
+  DOCKER_PASSWORD: $CI_REGISTRY_PASSWORD  
+  AWS_REGION: 'ap-south-1'  
+  EKS_CLUSTER_NAME: 'your-cluster-name'  
 
 before_script:
   - echo "Setting up Docker"
