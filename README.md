@@ -35,7 +35,7 @@ This is a Weather Dashboard application designed to provide users with up-to-dat
 
 ### Links
 
-- Live Site URL : [Weather Application](https://weatheritoo.vercel.app/)
+- Live Site URL : [Weather Application](https://main.d3p3mj8qy0la6p.amplifyapp.com/)
 
 ### Features
 
