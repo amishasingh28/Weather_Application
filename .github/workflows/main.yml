@@ -30,7 +30,7 @@ jobs:
       run: |
         VERSION="v1.${{ github.run_number }}.${{ steps.commit_hash.outputs.hash }}"
         TAGNAME="weather-application-${VERSION}"
-        docker build -t nikhil635/weather-node-local:$TAGNAME .
-        docker push nikhil635/weather-node-local:$TAGNAME
+        docker build -t amisha2812/weather-node-local:$TAGNAME .
+        docker push amisha2812/weather-node-local:$TAGNAME
 
         
